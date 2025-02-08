@@ -11,10 +11,16 @@ def create_database(connection, query):
         print(f"Error: '{err}'")
  
 def execute_query(connection, query):
-    cursor = connection.cursor()
+    cursor = connection.cursor(dictionary=True)  # Return results as dictionaries
     try:
         cursor.execute(query)
-        connection.commit()
-        print("Query successful")
+        if query.strip().lower().startswith("select"):
+            result = cursor.fetchall()  # Fetch all rows for SELECT queries
+            return result  # Return the retrieved data
+        else:
+            connection.commit()  # Commit for INSERT, UPDATE, DELETE
+            print("Query executed successfully")
+            return None
     except Error as err:
         print(f"Error: '{err}'")
+        return None

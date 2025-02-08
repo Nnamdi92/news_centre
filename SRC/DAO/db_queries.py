@@ -24,3 +24,6 @@ def SAVE_DATA_QUERY():
         VALUES (%s, %s, %s, %s, %s, %s, %s, %s);
     """
  
+GET_ALL_NEWS_QUERY = """
+SELECT * FROM news_data
+"""
