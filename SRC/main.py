@@ -7,7 +7,7 @@ from database.db_utils import execute_query, create_database
 
 
 
-connection = create_server_connection("localhost", "root", "Havard@1992")
+connection = create_server_connection("localhost", "root", "Havard1992")
 cursor = connection.cursor()
 # create_database(connection, CREATE_DATABASE_QUERY)
 
