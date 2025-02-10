@@ -4,7 +4,7 @@ from routes.get_all_news import get_all_news
 
 app = Flask(__name__)
     
-connection = create_server_connection("bt-newsapi-db-prod.c3ka2iwk2b6o.us-east-1.rds.amazonaws.com", "root", "Havard@1992")
+connection = create_server_connection("bt-newsapi-db-prod.c3ka2iwk2b6o.us-east-1.rds.amazonaws.com", "root", "Havard1992")
 
 
 @app.route("/", methods=["GET"])
