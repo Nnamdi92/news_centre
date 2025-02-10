@@ -7,7 +7,7 @@ from database.db_utils import execute_query, create_database
 
 
 
-connection = create_server_connection("localhost", "root", "Havard1992")
+connection = create_server_connection("bt-newsapi-db-prod.c3ka2iwk2b6o.us-east-1.rds.amazonaws.com", "root", "Havard1992")
 cursor = connection.cursor()
 # create_database(connection, CREATE_DATABASE_QUERY)
 
